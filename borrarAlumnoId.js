@@ -7,7 +7,9 @@ const borrarAlumnoId = async (id)=>{
     
 
     try{
+        
         const dato = {
+            id:id,
             nombre: document.querySelector('#name').value,
             dni: document.querySelector('#dni').value,
             imagen: document.querySelector('#img').value,
@@ -16,6 +18,7 @@ const borrarAlumnoId = async (id)=>{
         }
 
         const uri = 'http://localhost:3000/api/alumnos/'
+        
         const alumnoNuevo = await fetch(uri,{
             method: 'DELETE',
             body:JSON.stringify(dato),

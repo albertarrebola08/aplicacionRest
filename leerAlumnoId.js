@@ -14,7 +14,7 @@ const leerAlumnoId = async (evento)=>{
 
         const uri = 'http://localhost:3000/api/alumnos/'
         const alumnoNuevo = await fetch(uri,{
-            method: 'DELETE',
+            method: 'GET',
             body:JSON.stringify(dato),
             headers: {
                 "Content-Type": "application/json"

@@ -7,7 +7,7 @@ import { modificarAlumnoId } from "./modificarAlumnoId.js"
 
 const app = ()=>{
     leerAlumnos()
-    document.querySelector('#formulario').addEventListener('submit',crearTarea)
+    document.querySelector('#formulario').addEventListener('submit',crearAlumno)
     //DETECTO CON BURBUJEO SI SE CLICA EN EL ICONO BASURA O EN EL LAPIZ (EDIT)
     document.querySelector('.listaAlumnos').addEventListener('click',(element)=>{
         if (element.target.classList.contains('fa-trash')){

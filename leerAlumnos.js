@@ -2,7 +2,7 @@ const leerAlumnos = async ()=>{
     console.log('leerAlumnos');
     
     try{
-        const uri = 'http://localhost:3000/alumnos/'
+        const uri = 'http://localhost:3000/api/alumnos/'
         
         const peticionAlumnos = await fetch(uri,{
             
@@ -14,6 +14,7 @@ const leerAlumnos = async ()=>{
         var html = `
         <table class="table table-striped">
             <tr class="table-secondary">
+                <th></th>
                 <th>Nombre</th>
                 <th>Apellido 1</th>
                 <th>Apellido 2</th>
@@ -26,7 +27,7 @@ const leerAlumnos = async ()=>{
             html += `
             <tr class="table table-dark">
                 
-                <td><i data-id=${element._id} class="fa-solid fa-trash"></i><i data-id=${element.email} class="fa-solid mx-3 fa-pen-to-square"></i></td>
+                <td><i data-id=${element.id} class="fa-solid fa-trash"></i><i data-id=${element.id} class="fa-solid mx-3 fa-pen-to-square"></i></td>
                 <td>${element.nombre}</td>
                 <td>${element.apellido1}</td>
                 <td>${element.apellido2}</td>
